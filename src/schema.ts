@@ -9,6 +9,13 @@ const User = objectType({
     t.model.familyName()
     t.model.email()
     t.model.roles()
+
+    t.string('fullName', {
+      async resolve(_parent, _args, ctx) {
+        const result = `${_parent.givenName} ${_parent.familyName}`
+        return result
+      },
+    })
   },
 })
 

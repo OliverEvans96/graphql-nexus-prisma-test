@@ -22,6 +22,7 @@ enum Role {
 type User {
   email: String!
   familyName: String!
+  fullName: String!
   givenName: String!
   id: Int!
   roles: [Role!]!
