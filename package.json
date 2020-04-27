@@ -1,5 +1,6 @@
 {
   "name": "typescript-graphql",
+  "license": "UNLICENSED",
   "scripts": {
     "start": "node dist/server",
     "clean": "rm -rf dist",
