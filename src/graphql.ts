@@ -1,4 +1,3 @@
-// import { nexusPrismaPlugin } from 'nexus-prisma'
 import { schema } from 'nexus'
 
 schema.objectType({
@@ -27,7 +26,7 @@ schema.objectType({
     t.list.field('getHighUsers', {
       type: 'User',
       resolve: (_, args, ctx) => {
-        return ctx.prisma.user.findMany({
+        return ctx.db.user.findMany({
           where: { id: { gte: 2 } },
         })
       },

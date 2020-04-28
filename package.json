@@ -1,11 +1,11 @@
 {
   "name": "typescript-graphql",
   "license": "UNLICENSED",
-  "main": "src/app.ts",
+  "main": "dist/index",
   "scripts": {
     "dev": "nexus dev",
     "build": "nexus build",
-    "start": "node-ts node_modules/.build"
+    "start": "node ."
   },
   "dependencies": {
     "nexus": "next",
@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@types/node": "12.12.37",
-    "ts-node": "8.9.0",
+    "ts-node": "^8.9.1",
     "ts-node-dev": "1.0.0-pre.44",
     "typescript": "3.8.3"
   },
