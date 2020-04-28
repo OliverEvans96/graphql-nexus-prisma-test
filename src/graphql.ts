@@ -10,8 +10,13 @@ schema.objectType({
     t.model.roles()
 
     t.string('fullName', {
+      args: {
+        familyFirst: schema.booleanArg(),
+      },
       async resolve(_parent, _args, ctx) {
-        const result = `${_parent.givenName} ${_parent.familyName}`
+        const names = [_parent.givenName, _parent.familyName]
+        const orderedNames = _args.familyFirst ? names.reverse() : names
+        const result = orderedNames.join(' ')
         return result
       },
     })
