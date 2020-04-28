@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "nexus dev",
     "build": "nexus build",
-    "start": "node ."
+    "start": "node .",
+    "studio": "prisma studio --experimental"
   },
   "dependencies": {
     "nexus": "next",
